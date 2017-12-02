@@ -1,4 +1,4 @@
-var myLayer = L.GeoJSON(ov);
+var myLayer = L.geoJson(ov);
 
 var map = new L.map('map', {
 	layers:[myLayer]
