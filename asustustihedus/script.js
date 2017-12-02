@@ -28,21 +28,22 @@ for (var i in ov.features) {
 }
 
 function getColor(d) {
-	return d > 640 ? '#54278f' :
-	d > 210 ? '#756bb1' :
-	d > 20 ? '#9e9ac8' :
-	d > 10 ? '#cbc9e2' :
-	'#f2f0f7';
+	return d > 640 ? '#cb181d' :
+	d > 210 ? '#fb6a4a' :
+	d > 20 ? '#fcae91' :
+	'#fee5d9';
 }
 
 function style(feature) {
     return {
         fillColor: getColor(feature.properties.tihedus),
-        weight: 2,
+        weight: 1,
         opacity: 1,
         color: 'white',
         fillOpacity: 0.7
     };
 }
 
-L.geoJson(ov, {style:style}).addTo(map);
+ov.setStyle(style(feature));
+
+// L.geoJson(ov, {style:style}).addTo(map);
