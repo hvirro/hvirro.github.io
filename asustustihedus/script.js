@@ -1,8 +1,6 @@
-var myLayer = L.geoJson(ov);
+var map = L.map('map');
 
-var map = L.map('map', {
-	layers:[myLayer]
-});
+var myLayer = L.geoJson(ov).addTo(map);
 
 var theLayers = L.LayerGroup([myLayer]);
 var baseLayers = { };
