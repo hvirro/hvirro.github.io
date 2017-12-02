@@ -1,3 +1,4 @@
 var map = L.map('map');
 
-var myLayer= L.geoJson.ajax(ov).addTo(map);
+var myLayer= new L.geoJson.ajax("ov.geojson");
+myLayer.addTo(map);
