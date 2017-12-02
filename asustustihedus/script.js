@@ -1,10 +1,10 @@
 var myLayer = L.geoJson(ov);
 
-var map = new L.map('map', {
+var map = L.map('map', {
 	layers:[myLayer]
 });
 
-var theLayers = new L.LayerGroup([myLayer]);
+var theLayers = L.LayerGroup([myLayer]);
 var baseLayers = { };
 var overlays = {
 	"Omavalitsused": myLayer
