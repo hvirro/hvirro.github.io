@@ -1,7 +1,7 @@
 // Loome tausta
 var map = new L.map('map');
 
-var myLayer = new L.geoJson(ov);
+var ov = new L.geoJson(ov);
 
 
 myLayer.addTo(map);
@@ -16,6 +16,8 @@ var overlays = {
 L.control.layers(baseLayers, overlays).addTo(map);
 
 L.control.scale({imperial:false, maxWidth:250}).addTo(map);
+
+var tihedused = new L.geoJson(tihedused);
 
 for (var i in ov.features) {
 	for (var j in tihedused.features) {
