@@ -1,7 +1,11 @@
-var map = L.map('map');
-
-var myLayer = L.geoJson(ov).addTo(map);
-
+var myLayer= L.geoJson(ov);
+var theLayers = new L.layerGroup([myLayer]);
+map = new L.map('map', {
+layers:[myLayer],
+});
+var baseLayers={};
+var overLay={
+"Omavalitsused": myLayer,
+}
+L.control.layers(baseLayers, overLay).addTo(map);
 map.fitBounds(myLayer.getBounds());
-
-L.control.scale({imperial:false, maxWidth:250}).addTo(map);
