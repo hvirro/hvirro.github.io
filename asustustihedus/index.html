@@ -19,6 +19,14 @@
 	</head>
 	<body>
 		<div id="map"></div>
+		function popUp(feature, layer) {
+    layer.bindPopup(feature.properties.ONIMI);
+  }
+
+  var geojsonLayer = new L.GeoJSON.AJAX("./ov.json", {onEachFeature:popUp});
+
+  var map = L.map('map').fitBounds(geojsonLayer.getBounds());
+  geojsonLayer.addTo(map);
 		<script src="script.js"></script>
 	</body>
 </html>
