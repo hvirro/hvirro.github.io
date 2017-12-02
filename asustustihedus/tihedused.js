@@ -1,5 +1,4 @@
-var tihedused = [
-{
+var tihedused = {
 "type": "FeatureCollection",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
@@ -217,5 +216,4 @@ var tihedused = [
 { "type": "Feature", "properties": { "OKOOD": 874, "ONIMI": "Vastseliina vald", "tihedus": 8.77026 }, "geometry": null },
 { "type": "Feature", "properties": { "OKOOD": 918, "ONIMI": "Võru vald", "tihedus": 23.39771 }, "geometry": null }
 ]
-}
-];
+};
