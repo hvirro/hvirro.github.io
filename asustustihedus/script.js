@@ -7,7 +7,7 @@ map.fitBounds(myLayer.getBounds());
 var theLayers = new L.LayerGroup([myLayer]);
 var baseLayers = { };
 var overlays = {
-  "Omavalitsused":myLayer,
+  "Omavalitsused":myLayer
 };
 L.control.layers(baseLayers, overlays).addTo(map);
 
