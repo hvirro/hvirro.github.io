@@ -1,6 +1,6 @@
 var map = L.map('map');
 
-L.geoJson(ov).addTo(map);
+var myLayer = L.geoJson(ov).addTo(map);
 
 map.fitBounds(myLayer.getBounds());
 
