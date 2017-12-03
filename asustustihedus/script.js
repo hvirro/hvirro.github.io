@@ -52,7 +52,7 @@ var myLayer = L.geoJson(ov, {style:style}).addTo(map);
 myLayer = L.geoJson(ov, {
 	onEachFeature: function(feature, layer) {
 		var f = feature.properties;
-		var popupContent = (f.ONIMI +", " +f.MNIMI);
+		var popupContent = (f.ONIMI +", " +f.MNIMI+"<br>Asustustihedus: "+f.tihedus+" elanikku km2 kohta");
 		layer.on('mouseover', function(e) {
 			var popup = L.popup().setLatLng([e.latlng.lat+0.05, e.latlng.lng]).setContent(popupContent).openOn(map);
 		});
