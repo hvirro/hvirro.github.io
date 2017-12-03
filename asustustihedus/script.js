@@ -45,4 +45,16 @@ function style(feature) {
 
 // ov.setStyle(style(feature));
 
-L.geoJson(ov, {style:style}).addTo(map);
+// L.geoJson(ov, {style:style}).addTo(map);
+
+var myLayer = L.geoJson(ov, {style:style}).addTo(map);
+
+myLayer = L.geoJson(ov, {
+	onEachFeature: function(feature, layer) {
+		var f = feature.properties;
+		var popupContent = (f.ONIMI +", " +f.MNIMI);
+		layer.on('mouseover', function(e) {
+			var popup = L.popup().setLatLng([e.latlng.lat+0.05, e.latlng.lng]).setContent(popupContent).openOn(map);
+		});
+	}
+});
