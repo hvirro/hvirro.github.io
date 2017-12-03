@@ -10,14 +10,49 @@
 		integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
 		crossorigin=""></script>
 		<style>
+		h1 {
+			font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+			font-size: 24px;
+		}
+		h2 {
+			font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+			font-size: 18px;
+		}
 		#map {
 			width: 960px;
 			height: 500px;
 		}
+		.info {
+			padding: 6px 8px;
+			font: 14px/16px Arial, Helvetica, Sans-Serif;
+			background: white;
+			background: rgba(255,255,255,0.8);
+			box-shadow: 0 0 15px rgba(0,0,0,0.2);
+			border-radius: 5px;
+		}
+		.info h4 {
+			margin: 0 0 5px;
+			color: #777;
+		}
+		.legend {
+			line-height: 18px;
+			color: #555;
+		}
+		.legend i {
+			width: 18px;
+			height: 18px;
+			float: left;
+			margin-right: 8px;
+			opacity: 0.7;
+		}
 		</style>
 	</head>
 	<body>
+		<h1 align=center>Asustustihedus Eesti omavalitsustes 2017. aastal</h1>
+		<h2 align=center>Autorid: Mihkel Puusepp ja Holger Virro</h2>
+		<div align=center>
 		<div id="map"></div>
+		</div>
 		<script src="ov.js"></script>
 		<script src="tihedused.js"></script>
 		<script src="script.js"></script>
