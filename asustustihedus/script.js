@@ -3,7 +3,6 @@ var map = new L.map('map');
 
 var ov = new L.geoJson(ov);
 
-
 myLayer.addTo(map);
 map.fitBounds(myLayer.getBounds());
 
@@ -44,6 +43,6 @@ function style(feature) {
     };
 }
 
-ov.setStyle(style(feature));
+// ov.setStyle(style(feature));
 
-// L.geoJson(ov, {style:style}).addTo(map);
+L.geoJson(ov, {style:style}).addTo(map);
