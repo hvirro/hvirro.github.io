@@ -38,7 +38,7 @@ var ov = L.geoJson(ov, {
 		var f = feature.properties;
 		var popupContent = (f.ONIMI+", "+f.MNIMI+"<br>Asustustihedus:"+"<br>"+
 				    Math.round(f.tihedus*10)/10+" elanikku km<sup>2</sup> kohta");
-		layer.on('mouseover', function(e) {
+		layer.on('click', function(e) {
 			var popup = L.popup().setLatLng([e.latlng.lat, e.latlng.lng]).setContent(popupContent).openOn(map);
 		});
 		//layer.on({
