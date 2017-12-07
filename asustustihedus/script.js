@@ -54,12 +54,12 @@ map.fitBounds(ov.getBounds());
 var theLayers = new L.LayerGroup([ov]);
 var baseLayers = { };
 var overlays = {
-  "Omavalitsused":ov
+  "Omavalitsused": ov
 };
 L.control.layers(baseLayers, overlays).addTo(map);
 
 // Mõõtkava
-L.control.scale({imperial:false, maxWidth:250}).addTo(map);
+L.control.scale({imperial: false, maxWidth: 250}).addTo(map);
 
 // Loome legendi ja kujundame selle vastavalt värviskaalale (kasutame ka HTML-faili päises lisatud CSS-i)
 var legend = L.control({position: 'bottomright'});
