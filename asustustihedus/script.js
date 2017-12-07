@@ -26,11 +26,6 @@ function style(feature) {
     };
 }
 
-// Funktsioon, mis suurendab omavalitsuseni, kui sellel klõps teha
-//function zoomToFeature(e) {
-//    map.fitBounds(e.target.getBounds());
-//}
-
 // Loome failist 'ov.js' objekti ov, rakendame loodud funktsioonid ja lisame hüpikakna OV nime, maakonna ja tiheduse esitamiseks
 var ov = L.geoJson(ov, {
 	onEachFeature: function(feature, layer) {
@@ -41,9 +36,6 @@ var ov = L.geoJson(ov, {
 		layer.on('click', function(e) {
 			var popup = L.popup().setLatLng([e.latlng.lat, e.latlng.lng]).setContent(popupContent).openOn(map);
 		});
-		//layer.on({
-		//	click: zoomToFeature
-		//});
 	}
 }).addTo(map);
 
